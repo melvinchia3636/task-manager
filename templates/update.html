@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block header %}
+<div class="header">
+  <a href="" class="logo">Task Manager</a>
+  <div class="header-right">
+    <a class="active" href="">Home</a>
+    <a href="">History</a>
+    <a href="">About</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <center>
+        <form action="/update/{{task.id}}", method="POST">
+            <input type="text", name="content", id="content", placeholder="Add Task...", autocomplete="off", value="{{task.content}}">
+            <input type="submit", value="UPDATE">
+        </form>
+    </center>
+</div>
+{% endblock %}
